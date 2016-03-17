@@ -1,0 +1,25 @@
+<template name="blog">
+
+        <div class="card-panel"> <h1 class="center-align">Random Musings</h1></div>
+<div class="container ">
+        {{#if blogReady}} {{#each posts}}
+        <div class="card hoverable">
+                <div class="card-content">
+                        <h6 class="card-title">{{title}}</h6>
+                        <p class="truncate">{{{excerpt}}}</p>
+                </div>
+                <div class="card-action">
+                        <a href="/blog/{{slug}}">FULL POST</a>
+                </div>
+        </div>
+        {{else}}
+                <li>No posts found.</li>
+        {{/each}}
+        {{else}}
+                {{> spinner}}
+        {{/if}}
+
+</div>
+
+
+</template>

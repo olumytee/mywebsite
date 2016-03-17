@@ -1,0 +1,30 @@
+
+<template name="myShowBlogTemplate">
+
+                {{#if blogReady}}
+      {{#with post}}
+
+         <div class="card-panel"> <h1 class="center-align">{{title}}</h1>   <div class="card-image"><img src="{{featuredImage}}"></div></div>
+
+        <div class="container">
+
+                <p class="flow-text center-align black-text">Published by Olumide on {{formatDate date}}.<br></p>
+
+                        <p class="flow-text">{{{body}}}<br></p>
+                        <div class="col-lg-4">{{> shareit shareData}}</div>
+        </div>
+
+      {{/with}}
+
+      {{else}}
+
+         <div class="card-panel">      {{> spinner}}</div>
+    <div class="container">{{> spinner}}</div>
+
+    {{/if}}
+
+
+
+
+
+</template>
