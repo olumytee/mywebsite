@@ -28,3 +28,6 @@ Router.route('/about', {
 Router.route('/login', function () {
   this.render('login');
 });
+Router.route('/now', function () {
+  this.render('now');
+});
