@@ -1,13 +1,14 @@
 <template name="contact">
         <div class="card-panel"> <h1 class="center-align">Say Hi</h1></div>
         <div class="container" >
-        <p class="flow-text left-align">Let's discuss your ideas</p>
-        
+        <p class="flow-text left-align">Let's discuss your ideas </p>
+
+
         <div class="row">
-                
+
                 <div class="col l6 s12">
-                       
-        
+
+
                 <div class="row">
     <form >
               <p>Send me a message</p>
@@ -16,16 +17,16 @@
           <input id="name" type="text" class="validate">
           <label for="name">Your Name</label>
         </div>
-      
+
       </div>
-     
+
       <div class="row">
         <div class="input-field">
           <input id="email" type="email" class="validate">
           <label for="email">Your Email Address</label>
         </div>
       </div>
-          
+
 
       <div class="row">
         <div class="input-field">
@@ -33,35 +34,42 @@
           <label for="textarea1">Your Message</label>
         </div>
       </div>
+      {{#if isLoading}}
+      <button class="btn waves-effect waves-light black disabled" type="submit" >Send
+          <i class="material-icons right">send</i>
+        </button>
+{{else}}
 <button class="btn waves-effect waves-light black" type="submit" >Send
     <i class="material-icons right">send</i>
   </button>
+{{/if}}
+
     </form>
 
   </div>
-                
+
                 </div>
-                
+
                 <div class="col l6 s12">
                          <p>You can also contact me through</p>
-                         <ul class="myList">                 
-                     
+                         <ul class="myList">
+
                                  <li class="bold">&nbsp;&nbsp;<a class="black-text" href="https://twitter.com/lohdlippi">Twitter: @LohdLippi</a></li>
-                                  <li class="bold black-text">&nbsp;&nbsp;WhatsApp: 08132614485</li>
+
                  <li class="bold">&nbsp;&nbsp;<a class="black-text" href="mailto:olumideojo@pitech.com.ng">Email: olumideojo@pitech.com.ng</a></li>
-                        
+
                 </ul>
-                         
-                
-                
-                
+
+
+
+
                 </div>
-                
-                
+
+
                 </div>
-        
-        
-        
+
+
+
         </div>
-          
+
 </template>

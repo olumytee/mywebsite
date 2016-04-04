@@ -4,12 +4,12 @@
     {
       "host": "ec2-52-32-47-81.us-west-2.compute.amazonaws.com",
       "username": "ubuntu",
-  
+
       // or pem file (ssh based authentication)
-      "pem": "/home/lohdlippi/keys/amazon.pem"
+      "pem": "C:/Users/Olumide/.ssh/amazon.pem"
     }
   ],
-
+// return 301 https://$server_name$request_uri;
   // Install MongoDB in the server, does not destroy local MongoDB on future setup
   "setupMongo": true,
 
@@ -22,7 +22,7 @@
   // Install PhantomJS in the server
   "setupPhantom": true,
 
-  // Show a progress bar during the upload of the bundle to the server. 
+  // Show a progress bar during the upload of the bundle to the server.
   // Might cause an error in some rare cases if set to true, for instance in Shippable CI
   "enableUploadProgressBar": true,
 
@@ -34,7 +34,7 @@
 
   // Configure environment
   "env": {
-    "ROOT_URL": "http://localhos",
+    "ROOT_URL": "http://bitsbox.xyz",
     "PORT": 3000
   },
 
