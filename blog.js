@@ -2,7 +2,7 @@ Blog.config({
   blogIndexTemplate: 'blog', // '/blog' route
   blogShowTemplate: 'myShowBlogTemplate', // '/blog/:slug' route
   rss: {
-    title: 'The Alaga',
+    title: 'BitsBox',
     description: 'Olumide' },
   syntaxHighlighting: false, // default is false
   syntaxHighlightingTheme: 'atelier-dune.dark', // default is 'github'
