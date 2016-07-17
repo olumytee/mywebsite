@@ -15,7 +15,7 @@ Template.contact.helpers({
 Template.contact.events({
         'submit form': function(event, template){
                 event.preventDefault();
-                  Session.set("sendButton", true);
+                Session.set("sendButton", true);
                 var name = event.target.name.value;
                 var email = event.target.email.value;
                 var text = event.target.text.value;
@@ -23,11 +23,12 @@ Template.contact.events({
 
                 if (error){
                         Materialize.toast('Message not sent :( Please try again', 6000)
-                        // 4000 is the duration of the toast
-                          Session.set("sendButton", undefined);
+                        Session.set("sendButton", undefined);
                 } else {
-
-                        Materialize.toast('Message sent! :D', 6000) // 4000 is the duration of the toast
+                        event.target.name.value = "";
+                        event.target.email.value = "";
+                        event.target.text.value = "";
+                        Materialize.toast('Message sent, thanks! I will get back to you shortly ;-)' , 6000) // 4000 is the duration of the toast
                         Session.set("sendButton", undefined);
                 }
 
@@ -41,19 +42,13 @@ Template.contact.events({
 })
 
 
-Handlebars.registerHelper("formatDate", function(datetime){
+Template.registerHelper("formatDate", function(datetime){
     if (moment) {
-
          return moment(datetime).format("Do MMMM, YYYY");
-
-
     }
     else {
     return datetime;
     }
-
-
-
 });
 
 Template.myShowBlogTemplate.helpers({
@@ -64,5 +59,4 @@ Template.myShowBlogTemplate.helpers({
       summary: this.excerpt
   }
 }
-
 });
